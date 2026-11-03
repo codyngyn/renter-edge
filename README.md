@@ -1,6 +1,6 @@
 # Renter Edge
 
-A small evidence-first rental report viewer, developed in Codex from Cody Nguyen's Kellogg Building Intelligent Products coursework.
+I built Renter Edge out of curiosity: could AI help me look past rental marketing and understand what I would actually need to confirm before renting? It turns listing text into a report of advertised costs, supporting evidence, missing information, and questions for the broker. Built by Cody Nguyen with Codex.
 
 ![Renter Edge marketplace report](docs/marketplace-preview.png)
 
@@ -18,7 +18,7 @@ Requires Node.js 20 or later. No packages need to be installed.
 npm start
 ```
 
-Open http://127.0.0.1:4173. The preview server serves only `dist/`, not the surrounding coursework or research folder. Set `PORT` if 4173 is already in use.
+Open http://127.0.0.1:4173. The preview server serves only `dist/`, not the private configuration or research folder. Set `PORT` if 4173 is already in use.
 
 ```sh
 npm test
