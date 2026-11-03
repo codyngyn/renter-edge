@@ -1,0 +1,294 @@
+{
+  "format": "renter-edge-evidence-packet",
+  "version": "0.1",
+  "stage": "research evidence; final app report schema deferred to step 4",
+  "caseId": "nyc-180-water-312-historical",
+  "createdAt": "2026-11-02T06:17:46.823Z",
+  "userFacingDate": "2026-11-01",
+  "userTimezone": "America/Los_Angeles",
+  "retrievalWindowUtc": {
+    "start": "2026-11-02T06:14:42.955Z",
+    "end": "2026-11-02T06:17:46.823Z",
+    "note": "Sources were retrieved during this window. Exact per-call timestamps were not supplied; provider acquisition dates below are separate."
+  },
+  "caseType": "real historical listing, not a current housing recommendation",
+  "selectionReason": "Exact unit, explicit lease-concession inputs, stale availability wording, and independently discoverable building context.",
+  "providerPriority": [
+    "Parallel",
+    "TinyFish",
+    "Exa"
+  ],
+  "parallelSessionId": "e3c2ad22-9679-4bb5-973c-e30f20ca1d34",
+  "property": {
+    "address": "180 Water Street",
+    "borough": "Manhattan",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10038",
+    "unit": "312",
+    "buildingNameFromMarketing": "Aqua House",
+    "identifiers": {
+      "hpdBuildingId": "29370",
+      "bin": "1001134",
+      "block": 70,
+      "lot": 32,
+      "bbl": "1000700032",
+      "sourceIds": [
+        "S4",
+        "S5"
+      ],
+      "bblMethod": "Borough 1 + five-digit block 00070 + four-digit lot 0032, corroborated by the historical NYC list."
+    }
+  },
+  "renterPreferences": null,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "180 Water Street #312 — RentHop historical listing",
+      "url": "https://www.renthop.com/listings/180-water-street/312/76253469",
+      "type": "broker-posted listing on rental platform",
+      "scope": "exact unit 312",
+      "provider": "Parallel; Exa fallback",
+      "publishedAt": null,
+      "providerAcquiredAt": "2026-09-09T00:00:00Z",
+      "freshness": "Parallel returned an older snapshot despite live fetch being allowed. TinyFish refresh was bot-blocked. Exa returned the same historical status and core terms; its acquisition time was not supplied.",
+      "shortExcerpt": "LEASED / EXPIRED",
+      "summary": "Archived lease takeover with gross and net rent, a concession, known fees, and unit amenities. Body still invites immediate occupancy. RentHop recommendations are separate properties.",
+      "independentCorroboration": false
+    },
+    {
+      "id": "S2",
+      "title": "Aqua House NYC — 180 Water Street marketing site",
+      "url": "https://www.180waterst.com/",
+      "linkedBrandUrl": "https://www.aquahousenyc.com/",
+      "type": "building marketing site",
+      "scope": "building, not unit 312",
+      "provider": "Parallel",
+      "publishedAt": null,
+      "providerAcquiredAt": "2026-10-24T00:00:00Z",
+      "shortExcerpt": "ROOFTOP POOL WITH PANORAMIC VIEWS",
+      "summary": "Identifies the 180 Water Street address and markets a rooftop pool, fitness center, concierge, and in-unit laundry. Does not establish current pool operations, access price, or unit availability.",
+      "independentCorroboration": "Separate publisher from RentHop; still a marketing claim rather than an inspection."
+    },
+    {
+      "id": "S3",
+      "title": "180 Water Street — RentHop building summary",
+      "url": "https://www.renthop.com/building/180-water-street-new-york-ny-10038",
+      "type": "aggregated building summary",
+      "scope": "building, not unit 312",
+      "provider": "Parallel",
+      "publishedAt": null,
+      "providerAcquiredAt": "2026-10-07T00:00:00Z",
+      "summary": "Building narrative says there is no swimming pool, contrary to the building marketing site and the archived unit description. Same publisher as S1, so not independent corroboration.",
+      "independentCorroboration": false
+    },
+    {
+      "id": "S4",
+      "title": "HPD Online — building 29370 overview",
+      "url": "https://hpdonline.nyc.gov/hpdonline/building/29370/overview",
+      "type": "official city record",
+      "scope": "building only",
+      "provider": "TinyFish browser; Parallel follow-up",
+      "publishedAt": null,
+      "providerAcquiredAt": "2026-11-02T00:00:00Z",
+      "summary": "Direct extraction confirms 180 Water Street, Manhattan, ZIP 10038, building 29370, BIN 1001134, block 70, lot 32, active registration. Sections show retrieval errors. Counts are not accepted as verified.",
+      "independentCorroboration": true
+    },
+    {
+      "id": "S5",
+      "title": "2020 NYC Benchmarking Covered Buildings List",
+      "url": "https://www.nyc.gov/assets/buildings/pdf/benchmarking_cbl_compliance_2020.pdf",
+      "type": "historical official city list",
+      "scope": "building address and tax-lot identity only",
+      "provider": "Parallel search excerpt",
+      "publishedAt": "2020-02-25",
+      "providerAcquiredAt": null,
+      "summary": "Row associates 180 WATER STREET in Manhattan with BBL 1000700032. Used only as historical corroboration of identity; not evidence of current compliance, violations, or occupancy.",
+      "independentCorroboration": true
+    }
+  ],
+  "listingClaims": {
+    "sourceIds": [
+      "S1"
+    ],
+    "statusLabel": "LEASED / EXPIRED",
+    "bodyAvailabilityClaim": "Immediate move-in",
+    "availabilityNow": "Unknown; do not present as active",
+    "bedrooms": 1,
+    "flexBedroomClaim": true,
+    "bathrooms": 1,
+    "areaSqFtClaimed": 610,
+    "grossMonthlyRentUsd": 4992,
+    "advertisedNetEffectiveUsd": 4730,
+    "advertisedOriginalTermMonths": 19,
+    "advertisedFreeMonths": 1,
+    "leaseEndClaim": "2027-11-30",
+    "applicationFeePerApplicantUsd": 20,
+    "securityDepositUsd": 4992,
+    "firstMonthRentUsd": 4992,
+    "amenityMonthlyPerLeaseholderUsd": 65,
+    "insuranceMonthlyUsd": null,
+    "electricityMonthlyUsd": null,
+    "brokerFeeClaim": "No fee",
+    "unitConditionVerified": false,
+    "concessionTransferability": null,
+    "remainingTermMonths": null
+  },
+  "calculations": [
+    {
+      "id": "C1",
+      "name": "Original-term net effective rent",
+      "formula": "4992 * (19 - 1) / 19",
+      "valueUsd": 4729.26,
+      "inputSources": [
+        "S1"
+      ],
+      "assumptions": [
+        "Original 19-month term; full one-month concession; excludes all fees."
+      ],
+      "limits": "Advertised 4730 differs by about 0.74 per month. Small rounding difference, not evidence of fraud. Takeover concession entitlement remains unknown."
+    },
+    {
+      "id": "C2",
+      "name": "Known recurring amount for one leaseholder before unknown costs",
+      "formula": "4992 + 65",
+      "valueUsd": 5057,
+      "inputSources": [
+        "S1"
+      ],
+      "assumptions": [
+        "One leaseholder; gross rent plus listed amenity fee; no assumed concession allocation."
+      ],
+      "limits": "Not all-in cost. Insurance, electricity and other undisclosed charges remain unknown. Historical advertised terms only."
+    },
+    {
+      "id": "C3",
+      "name": "Listed upfront subtotal for one applicant",
+      "formula": "4992 + 4992 + 20",
+      "valueUsd": 10004,
+      "inputSources": [
+        "S1"
+      ],
+      "assumptions": [
+        "First month, one deposit, one application fee."
+      ],
+      "limits": "Not a complete move-in bill. Amenity fee timing, other charges, and takeover deposit transfer must be confirmed; refundable deposit is cash outlay, not rent expense."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "label": "Supported by supplied evidence",
+      "topic": "Historical status",
+      "sourceIds": [
+        "S1"
+      ],
+      "finding": "Expired page status and immediate-move-in body text coexist.",
+      "implication": "Do not expose an Apply or Available Now action for this case."
+    },
+    {
+      "id": "F2",
+      "label": "Inferred",
+      "topic": "Concession eligibility",
+      "sourceIds": [
+        "S1"
+      ],
+      "calculationIds": [
+        "C1"
+      ],
+      "finding": "The original lease average does not establish the effective rent for a new takeover renter.",
+      "implication": "Request remaining term, concession schedule, and written transfer terms."
+    },
+    {
+      "id": "F3",
+      "label": "Supported by supplied evidence",
+      "topic": "Conflicting pool claims",
+      "sourceIds": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "finding": "Building marketing advertises a pool; RentHop building narrative denies one.",
+      "implication": "Prefer the building's direct statement for advertised amenities, but actual operation and access conditions remain unknown."
+    },
+    {
+      "id": "F4",
+      "label": "Supported by supplied evidence",
+      "topic": "Search excerpt contamination",
+      "sourceIds": [
+        "S1"
+      ],
+      "finding": "The initial search excerpt included 4795 USD and 577 square feet from nearby unit 3109 at 116 John Street. Full page structure separates this card from the target description.",
+      "implication": "Do not treat nearby cards as target-unit fields or as a target price conflict."
+    },
+    {
+      "id": "F5",
+      "label": "Unknown",
+      "topic": "Official record counts",
+      "sourceIds": [
+        "S4"
+      ],
+      "finding": "HPD sections returned errors. Browser summary reported counts, but follow-up extraction could not confirm them.",
+      "implication": "Keep open violations and complaint totals null; do not infer a clean record or transfer another unit's issue to 312."
+    }
+  ],
+  "officialRecords": {
+    "identityVerified": true,
+    "sourceIds": [
+      "S4",
+      "S5"
+    ],
+    "openViolations": null,
+    "complaintTotal": null,
+    "openComplaints": null,
+    "unit312RecordAssessment": "Not established",
+    "rejectedToolConclusions": [
+      "TinyFish constructed BBL 1001133200 from a BIN; these are different identifiers. Retain BBL 1000700032 from block/lot and historical official corroboration.",
+      "TinyFish described 10 complaint rows as 10 complaints, but its table repeats a complaint ID. No verified unique count is retained.",
+      "TinyFish reported zero open violations alongside a server error. Zero is not accepted as a verified current count."
+    ],
+    "unverifiedObservations": "Browser summary described a complaint in another apartment. It is not evidence about unit 312, and no building safety conclusion is drawn."
+  },
+  "questions": [
+    "Is apartment 312 actually available now, and can management supply the current listing and written terms?",
+    "What is the remaining lease term, and does the incoming tenant receive the original free month or any unused concession?",
+    "What amounts are payable each month, and when is any concession credited?",
+    "What fees, insurance, utilities, and deposit-transfer amounts apply to this takeover?",
+    "Is the rooftop pool operating, who may use it, and are access fees or seasonal restrictions separate?",
+    "Is a flex partition permitted for this specific unit, and what layout, installation, and restoration conditions apply?"
+  ],
+  "collectionLog": [
+    {
+      "provider": "Parallel",
+      "action": "Search and extract candidate listing, building marketing, secondary building summary and official identity references",
+      "outcome": "Succeeded, but acquisition dates reveal stale snapshots."
+    },
+    {
+      "provider": "TinyFish",
+      "action": "Fetch exact listing with ttl 0",
+      "outcome": "bot_blocked"
+    },
+    {
+      "provider": "Exa",
+      "action": "Fetch same listing after TinyFish blockage",
+      "outcome": "Succeeded; historical status and terms consistent, acquisition timestamp unknown."
+    },
+    {
+      "provider": "TinyFish",
+      "action": "Read-only HPD public search",
+      "outcome": "Completed in 72 seconds; some sections errored; summary had identifier and counting problems.",
+      "runId": "a113ea8c-b5d8-48ae-955e-f982923ac488",
+      "runUrl": "https://agent.tinyfish.ai/runs/a113ea8c-b5d8-48ae-955e-f982923ac488"
+    },
+    {
+      "provider": "Parallel",
+      "action": "Fetch exact HPD overview URL returned by browser",
+      "outcome": "Confirmed identity and retrieval errors; did not verify complaint/violation counts."
+    }
+  ],
+  "publication": {
+    "status": "local research packet; not published",
+    "policy": "Use short factual summaries and links. No full listing copy, photos, personal renter details, or broker contact details. Prefer fictional fixtures for the public viewer."
+  },
+  "nextStep": "Build viewer with fictional cases; finalize import schema and transform this packet in step 4."
+}

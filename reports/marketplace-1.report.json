@@ -1,0 +1,100 @@
+{
+  "format": "renter-edge-report",
+  "version": 1,
+  "fictional": false,
+  "id": "marketplace-1",
+  "title": "150 East 39th Street #901",
+  "scenario": "Advertised rent agrees",
+  "prepared": "November 2, 2026",
+  "verdict": "Confirm the full written terms",
+  "summary": "Real RentHop listing, captured through research connectors. The retrieved page advertises immediate move-in, but current availability has not been confirmed with management. Missing fees remain unknown.",
+  "property": {
+    "name": "150 East 39th Street",
+    "area": "Murray Hill, Manhattan · RentHop snapshot",
+    "unit": "901",
+    "layout": "Studio · 1 bathroom claimed",
+    "availability": "Advertised for immediate move-in in the Exa retrieval on Nov 2, 2026. Snapshot age was not supplied; availability is not independently confirmed."
+  },
+  "costs": {
+    "gross": 3430,
+    "amenity": null,
+    "deposit": null,
+    "application": null,
+    "freeMonths": null,
+    "termMonths": null,
+    "unknowns": [
+      "Utilities",
+      "Renters insurance",
+      "Other move-in charges"
+    ],
+    "sourceIds": [
+      "listing"
+    ],
+    "note": "The displayed monthly price is an advertised rent, not a verified lease quote. Gross/net basis, concessions and lease term are not established. No-fee marketing does not establish that deposits or other charges are zero. Upfront subtotal includes only known inputs; confirm the first payment and complete move-in bill."
+  },
+  "sources": [
+    {
+      "id": "listing",
+      "title": "150 East 39th Street #901 — RentHop via Exa",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/150-e-39th-st/901/77243945/show",
+      "captured": "Retrieved Nov 2, 2026 via Exa; acquisition date not supplied.",
+      "excerpt": "Factual summary, not a quotation: Exact unit 901 is advertised at $3,430 monthly, studio/one bath, no broker fee, immediate move-in. Claims include doorman, elevator, fitness center, building laundry, roof deck and pets allowed. Lease length, concessions, deposit and amenity charges were not established."
+    },
+    {
+      "id": "earlier",
+      "title": "150 East 39th Street #901 — earlier Parallel snapshot",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/150-e-39th-st/901/77243945/show",
+      "captured": "Retrieved Nov 2, 2026 via Parallel; acquired Oct 28, 2026.",
+      "excerpt": "Factual summary, not a quotation: Advertises the same exact unit at $3,430 per month with no broker fee. Move-in shown as November 1. Same webpage and publisher as the Exa retrieval; not independent corroboration."
+    }
+  ],
+  "findings": [
+    {
+      "level": "supported",
+      "title": "Advertised price agrees across retrieved versions",
+      "detail": "Both retrieved versions of the exact unit page show $3,430 monthly. This establishes consistency in the supplied snapshots, not a verified lease quote or all-in price.",
+      "sourceIds": [
+        "listing",
+        "earlier"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "No-fee does not mean no additional costs",
+      "detail": "The advertiser says there is no broker fee. Deposit, application charges, utilities, insurance and any amenity fees were not established in the retrieved text. Missing amounts are not zero.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Availability needs a current confirmation",
+      "detail": "The retrieved listing advertises immediate move-in. TinyFish could not refresh the candidate pages because access was blocked; Exa did not supply its acquisition date. No manager has confirmed availability.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "supported",
+      "title": "Building amenities are advertised",
+      "detail": "The listing describes doorman service, fitness facilities, building laundry and a roof deck. Operating hours, access charges and actual condition were not independently checked.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Official building records not assessed",
+      "detail": "This report reviews marketplace text only. Complaint and violation records were not queried for this case; no safety or compliance conclusion is drawn.",
+      "sourceIds": []
+    }
+  ],
+  "questions": [
+    "Is this exact unit still available, and can you send its current written rent and lease terms?",
+    "Is the advertised price gross or net-effective, and are concessions conditional?",
+    "What are the deposit, application charge, utilities, insurance and other recurring or move-in charges?",
+    "Are gym and roof-deck access included, and what pet restrictions or charges apply?"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "format": "renter-edge-report",
+  "version": 1,
+  "fictional": false,
+  "id": "nyc-180-water-312-historical",
+  "title": "180 Water Street #312",
+  "scenario": "Historical · conflicting claims",
+  "prepared": "November 2, 2026 · saved research",
+  "verdict": "Historical listing — confirm before acting",
+  "summary": "The saved listing is marked leased / expired despite immediate-move-in wording. These are historical advertised terms, not a current offer. Pool claims conflict and official record counts could not be verified.",
+  "property": {
+    "name": "180 Water Street",
+    "area": "Financial District, Manhattan · historical listing",
+    "unit": "312",
+    "layout": "1 bedroom · 1 bathroom · 610 sq ft claimed",
+    "availability": "Unknown. Saved listing is marked leased / expired; immediate-move-in wording does not establish current availability."
+  },
+  "costs": {
+    "gross": 4992,
+    "amenity": 65,
+    "deposit": 4992,
+    "application": 20,
+    "termMonths": 19,
+    "freeMonths": 1,
+    "unknowns": [
+      "Electricity",
+      "Renters insurance",
+      "Other takeover charges",
+      "Deposit-transfer terms",
+      "Amenity payment timing"
+    ],
+    "sourceIds": [
+      "S1"
+    ],
+    "note": "Historical advertised terms only. Net-effective rent averages one free month across the ORIGINAL 19-month term, excluding fees. The advertised $4,730 is approximately rounded. The incoming renter’s remaining term and concession eligibility are unknown; confirm credit timing and the complete move-in bill."
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "180 Water Street #312 — RentHop historical listing",
+      "type": "broker-posted listing on rental platform",
+      "url": "https://www.renthop.com/listings/180-water-street/312/76253469",
+      "captured": "Retrieved Nov 2, 2026, 06:14–06:17 UTC; provider acquired: 2026-09-09T00:00:00Z",
+      "excerpt": "Factual summary (not a quotation): Archived lease takeover with gross and net rent, a concession, known fees, and unit amenities. Body still invites immediate occupancy. RentHop recommendations are separate properties. Scope: exact unit 312. Provider: Parallel; Exa fallback. Historical terms: $4,992 gross; $4,730 advertised net; original 19 months with one free; $65 monthly amenities per leaseholder; $20 per applicant; $4,992 deposit. Unit description claims 610 sq ft. Parallel returned an older snapshot despite live fetch being allowed. TinyFish refresh was bot-blocked. Exa returned the same historical status and core terms; its acquisition time was not supplied."
+    },
+    {
+      "id": "S2",
+      "title": "Aqua House NYC — 180 Water Street marketing site",
+      "type": "building marketing site",
+      "url": "https://www.180waterst.com/",
+      "captured": "Retrieved Nov 2, 2026, 06:14–06:17 UTC; provider acquired: 2026-10-24T00:00:00Z",
+      "excerpt": "Factual summary (not a quotation): Identifies the 180 Water Street address and markets a rooftop pool, fitness center, concierge, and in-unit laundry. Does not establish current pool operations, access price, or unit availability. Scope: building, not unit 312. Provider: Parallel."
+    },
+    {
+      "id": "S3",
+      "title": "180 Water Street — RentHop building summary",
+      "type": "aggregated building summary",
+      "url": "https://www.renthop.com/building/180-water-street-new-york-ny-10038",
+      "captured": "Retrieved Nov 2, 2026, 06:14–06:17 UTC; provider acquired: 2026-10-07T00:00:00Z",
+      "excerpt": "Factual summary (not a quotation): Building narrative says there is no swimming pool, contrary to the building marketing site and the archived unit description. Same publisher as S1, so not independent corroboration. Scope: building, not unit 312. Provider: Parallel."
+    },
+    {
+      "id": "S4",
+      "title": "HPD Online — building 29370 overview",
+      "type": "official city record",
+      "url": "https://hpdonline.nyc.gov/hpdonline/building/29370/overview",
+      "captured": "Retrieved Nov 2, 2026, 06:14–06:17 UTC; provider acquired: 2026-11-02T00:00:00Z",
+      "excerpt": "Factual summary (not a quotation): Direct extraction confirms 180 Water Street, Manhattan, ZIP 10038, building 29370, BIN 1001134, block 70, lot 32, active registration. Sections show retrieval errors. Counts are not accepted as verified. Scope: building only. Provider: TinyFish browser; Parallel follow-up."
+    },
+    {
+      "id": "S5",
+      "title": "2020 NYC Benchmarking Covered Buildings List",
+      "type": "historical official city list",
+      "url": "https://www.nyc.gov/assets/buildings/pdf/benchmarking_cbl_compliance_2020.pdf",
+      "captured": "Retrieved Nov 2, 2026, 06:14–06:17 UTC; provider acquired: not supplied",
+      "excerpt": "Factual summary (not a quotation): Row associates 180 WATER STREET in Manhattan with BBL 1000700032. Used only as historical corroboration of identity; not evidence of current compliance, violations, or occupancy. Scope: building address and tax-lot identity only. Provider: Parallel search excerpt. Published February 25, 2020; only a search excerpt was retrieved."
+    }
+  ],
+  "findings": [
+    {
+      "level": "conflict",
+      "title": "Historical status",
+      "detail": "Expired page status and immediate-move-in body text coexist. Current availability is unknown; request a current unit-specific offer before acting.",
+      "sourceIds": [
+        "S1"
+      ]
+    },
+    {
+      "level": "inferred",
+      "title": "Concession eligibility",
+      "detail": "The original lease average does not establish the effective rent for a new takeover renter. Request remaining term, concession schedule, and written transfer terms.",
+      "sourceIds": [
+        "S1"
+      ]
+    },
+    {
+      "level": "conflict",
+      "title": "Conflicting pool claims",
+      "detail": "Building marketing advertises a pool; RentHop building narrative denies one. Prefer the building's direct statement for advertised amenities, but actual operation and access conditions remain unknown.",
+      "sourceIds": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "level": "supported",
+      "title": "Search excerpt contamination",
+      "detail": "The initial search excerpt mixed in $4,795 and 577 square feet from nearby unit 3109 at 116 John Street. The full listing separates that recommendation from apartment 312. Those figures are excluded from this report’s cost and size claims.",
+      "sourceIds": [
+        "S1"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Official record counts",
+      "detail": "HPD sections returned errors. A browser summary reported counts, but follow-up extraction could not confirm them. Complaint and violation totals remain unknown. This does not establish a clean record or tell us the condition of apartment 312.",
+      "sourceIds": [
+        "S4"
+      ]
+    },
+    {
+      "level": "supported",
+      "title": "Building identity matched; unit condition not assessed",
+      "detail": "The supplied official records associate 180 Water Street with HPD building 29370, BIN 1001134 and BBL 1000700032. The historical city list corroborates identity only. These identifiers do not verify unit 312’s condition or current compliance.",
+      "sourceIds": [
+        "S4",
+        "S5"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Flex permission and full costs remain open",
+      "detail": "A flex-bedroom claim is not unit-specific permission. Electricity, insurance, takeover charges, concession entitlement and deposit-transfer terms need written confirmation. Historical advertised costs are incomplete.",
+      "sourceIds": [
+        "S1"
+      ]
+    }
+  ],
+  "questions": [
+    "Is apartment 312 actually available now, and can management supply the current listing and written terms?",
+    "What is the remaining lease term, and does the incoming tenant receive the original free month or any unused concession?",
+    "What amounts are payable each month, and when is any concession credited?",
+    "What fees, insurance, utilities, and deposit-transfer amounts apply to this takeover?",
+    "Is the rooftop pool operating, who may use it, and are access fees or seasonal restrictions separate?",
+    "Is a flex partition permitted for this specific unit, and what layout, installation, and restoration conditions apply?"
+  ]
+}

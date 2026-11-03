@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Understand the claims, costs, and unanswered questions behind a rental listing. An evidence-first portfolio prototype.">
+  <title>Renter Edge — Look closer. Rent clearer.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23243e35'/%3E%3Cpath d='M11 29V12h10a6 6 0 010 12H11m9 0l8 5' fill='none' stroke='%23faf7ed' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#report">Skip to report</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Renter Edge home"><span class="brand-mark" aria-hidden="true">re<span>↗</span></span>Renter Edge<span class="prototype">PROTOTYPE</span></a>
+    <div class="top-actions"><button id="about-button" class="text-button">How this works</button><span class="local-pill"><span></span>Saved reports stay local</span></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Report library">
+      <div class="library-heading"><p class="eyebrow">YOUR WORKSPACE</p><h2>Look closer.<br>Rent clearer.</h2><p class="muted">The evidence behind the listing.</p></div>
+      <div class="section-label"><span>MARKETPLACE REPORTS</span><span>03</span></div>
+      <nav id="case-list" aria-label="Choose a marketplace report"></nav>
+      <p id="public-demo-note" class="muted">Explore three researched listings below. New listing analysis is available only in the owner’s private demo.</p><form id="analyze-form" class="import-panel" hidden><h3>Private owner demo</h3><label>Demo access token<input id="demo-token" type="password" autocomplete="off" required></label><label>RentHop listing URL<input id="listing-url" type="url" required placeholder="https://www.renthop.com/listings/…"></label><label>Listing description (optional)<textarea id="listing-text" maxlength="20000" rows="5" placeholder="Paste text if the page cannot be read"></textarea></label><p>Analysis sends the URL to Parallel and listing text to OpenAI. Do not include personal details. Saved reports remain available.</p><button id="analyze-button" class="secondary-button">Analyze listing</button><p id="analyze-status" role="status"></p></form><div class="import-panel"><span class="small-icon" aria-hidden="true">↥</span><h3>Bring your own report</h3><p>Open a report prepared in Codex. Your file stays in this browser.</p><button id="import-button" class="secondary-button">Import report <span aria-hidden="true">↗</span></button><input id="file-input" type="file" accept="application/json,.json" hidden></div>
+      <div class="sidebar-foot"><span class="mini-mark" aria-hidden="true">re↗</span><p>Built with Codex<br><span>A Kellogg project by Cody Nguyen</span></p></div>
+    </aside>
+    <main id="report" tabindex="-1">
+      <div id="notice" role="alert" hidden></div>
+      <div class="report-toolbar"><span>RESEARCH / <span id="case-number">01</span></span><div><button id="mobile-import" class="text-button mobile-import">Import</button><button id="reset-button" class="text-button">Reset view</button><button id="export-button" class="secondary-button">Export report <span aria-hidden="true">↓</span></button></div></div>
+      <div class="demo-banner"><span aria-hidden="true">◇</span><p id="demo-text">Fictional example. Illustrates the workflow; not a real listing or live search.</p></div>
+      <section class="hero" aria-labelledby="property-title"><div><p class="eyebrow" id="area"></p><h1 id="property-title"></h1><p class="property-meta" id="property-meta"></p></div><div class="report-stamp"><span>RESEARCH BRIEF</span><strong id="report-date"></strong><span id="source-count"></span></div></section>
+      <section class="verdict" aria-labelledby="verdict-title"><span class="verdict-icon" aria-hidden="true">↗</span><div><p class="eyebrow">WHAT TO KNOW FIRST</p><h2 id="verdict-title"></h2><p id="verdict-summary"></p></div></section>
+      <div class="report-grid">
+        <div class="primary-column">
+          <section class="cost-section" aria-labelledby="cost-title"><div class="section-heading"><div><p class="eyebrow">01 / FINANCIAL REALITY</p><h2 id="cost-title">Beyond the headline rent</h2></div><span class="quiet-badge">Calculated, not guessed</span></div>
+            <div class="cost-cards"><article class="cost-card"><p>Listed monthly rent</p><strong id="gross-rent"></strong><span>advertised amount; review terms</span></article><article class="cost-card"><p>Net-effective rent</p><strong id="net-rent"></strong><span>lease average, before fees</span></article></div>
+            <div class="cost-explanation" id="cost-note"></div>
+            <div class="planner"><div class="planner-heading"><h3>Make the numbers yours</h3><span>Changes calculations only</span></div><div class="planner-inputs"><label>Monthly budget ($)<input id="budget" inputmode="decimal" type="number" min="1" max="1000000" step="1" placeholder="e.g. 3500"></label><label>Applicants / leaseholders<select id="people"><option value="1">1 person</option><option value="2">2 people</option><option value="3">3 people</option><option value="4">4 people</option><option value="5">5 people</option><option value="6">6 people</option></select></label></div>
+              <div class="subtotal-row"><span>Known monthly subtotal</span><strong id="monthly-total"></strong></div><div class="subtotal-row"><span>Listed upfront subtotal</span><strong id="upfront-total"></strong></div><p class="calculation-caption">Monthly: supplied rent + known amenity charges. Upfront: one month of supplied rent + known deposit + application fees. One application per leaseholder; deposit held constant.</p><p id="budget-result" class="budget-result" aria-live="polite"></p><div class="unknown-costs"><span>STILL TO CONFIRM</span><p id="unknown-costs"></p></div>
+            </div>
+          </section>
+          <section class="findings-section" aria-labelledby="findings-title"><div class="section-heading"><div><p class="eyebrow">02 / THE EVIDENCE</p><h2 id="findings-title">Claims, with context</h2></div></div><div class="filter-row" role="group" aria-label="Filter findings"><button data-filter="all" aria-pressed="true">All findings</button><button data-filter="supported" aria-pressed="false">Supported</button><button data-filter="inferred" aria-pressed="false">Inferred</button><button data-filter="conflict" aria-pressed="false">Conflicts</button><button data-filter="unknown" aria-pressed="false">Unknowns</button></div><div id="findings"></div></section>
+        </div>
+        <aside class="secondary-column" aria-label="Report context and questions"><section class="coverage"><p class="eyebrow">READ THE LABELS</p><h3>Clarity over certainty.</h3><p>Supported means the supplied evidence backs a claim. It does not mean the apartment was independently inspected.</p><div id="coverage-counts"></div><p class="availability-label">AVAILABILITY</p><p id="availability"></p></section>
+          <section class="questions-panel"><p class="eyebrow">03 / YOUR NEXT CONVERSATION</p><h2>Ask before you act.</h2><p class="muted">A focused checklist for the broker or property manager.</p><div id="questions"></div><p id="question-progress" class="question-progress" aria-live="polite"></p><button id="copy-button" class="secondary-button">Copy questions <span aria-hidden="true">↗</span></button></section>
+        </aside>
+      </div>
+      <section class="sources-section" aria-labelledby="sources-title"><div class="section-heading"><div><p class="eyebrow">SOURCE NOTEBOOK</p><h2 id="sources-title">See what this report is built on.</h2></div><span id="sources-caption"></span></div><div id="sources"></div></section>
+      <footer class="report-footer"><p>Evidence informs the next question.<br><strong>It never replaces your judgment.</strong></p><span>RENTER EDGE · PORTFOLIO PROTOTYPE</span></footer>
+    </main>
+  </div>
+  <dialog id="about-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form><p class="eyebrow">BEHIND THE REPORT</p><h2>A clearer view of a complicated decision.</h2><p>Renter Edge turns listing claims into a traceable report: what the supplied evidence supports, what conflicts, and what still needs a question.</p><ol><li><strong>Research in Codex.</strong> Parallel first, then TinyFish and Exa as needed.</li><li><strong>Review the evidence.</strong> Keep source dates, property identity and uncertainty visible.</li><li><strong>Explore the report here.</strong> Read findings, calculate known costs and prepare your questions.</li></ol><p class="dialog-note">The optional Analyze listing feature uses server-side Parallel extraction and OpenAI analysis when configured. Saved reports do not refresh automatically. Its three built-in reports use real marketplace snapshots with dated sources; availability is not independently confirmed. Imported reports stay in browser memory; nothing is uploaded or saved after refresh.</p><button id="download-example" class="primary-button">Download sample report ↓</button></dialog>
+  <dialog id="copy-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form><h2>Your broker questions</h2><p>Copy the text below.</p><textarea id="copy-text" readonly aria-label="Questions to copy"></textarea></dialog>
+</body>
+</html>

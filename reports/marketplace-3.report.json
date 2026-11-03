@@ -1,0 +1,100 @@
+{
+  "format": "renter-edge-report",
+  "version": 1,
+  "fictional": false,
+  "id": "marketplace-3",
+  "title": "241 East 46th Street #3D",
+  "scenario": "Fees and policies missing",
+  "prepared": "November 2, 2026",
+  "verdict": "Confirm the full written terms",
+  "summary": "Real RentHop listing, captured through research connectors. The retrieved page advertises immediate move-in, but current availability has not been confirmed with management. Missing fees remain unknown.",
+  "property": {
+    "name": "241 East 46th Street",
+    "area": "Turtle Bay, Manhattan · RentHop snapshot",
+    "unit": "3D",
+    "layout": "Studio · 1 bathroom claimed",
+    "availability": "Advertised for immediate move-in in the Exa retrieval on Nov 2, 2026. Snapshot age was not supplied; availability is not independently confirmed."
+  },
+  "costs": {
+    "gross": 2995,
+    "amenity": null,
+    "deposit": null,
+    "application": null,
+    "freeMonths": null,
+    "termMonths": null,
+    "unknowns": [
+      "Utilities",
+      "Renters insurance",
+      "Other move-in charges"
+    ],
+    "sourceIds": [
+      "listing"
+    ],
+    "note": "The displayed monthly price is an advertised rent, not a verified lease quote. Gross/net basis, concessions and lease term are not established. No-fee marketing does not establish that deposits or other charges are zero. Upfront subtotal includes only known inputs; confirm the first payment and complete move-in bill."
+  },
+  "sources": [
+    {
+      "id": "listing",
+      "title": "241 East 46th Street #3D — RentHop via Exa",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/east-46th-street/3d/77218097/show",
+      "captured": "Retrieved Nov 2, 2026 via Exa; acquisition date not supplied.",
+      "excerpt": "Factual summary, not a quotation: Exact unit 3D is advertised at $2,995 monthly, studio/one bath, no broker fee and immediate move-in. Claims include separate kitchen, microwave, dishwasher and hardwood flooring. Pet permission, lease length, deposit and other charges were not established."
+    },
+    {
+      "id": "earlier",
+      "title": "241 East 46th Street #3D — earlier Parallel snapshot",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/east-46th-street/3d/77218097/show",
+      "captured": "Retrieved Nov 2, 2026 via Parallel; acquired Oct 28, 2026.",
+      "excerpt": "Factual summary, not a quotation: Advertises the same exact unit at $2,995 per month with no broker fee. Immediate move-in shown. Same webpage and publisher as the Exa retrieval; not independent corroboration."
+    }
+  ],
+  "findings": [
+    {
+      "level": "supported",
+      "title": "Advertised price agrees across retrieved versions",
+      "detail": "Both retrieved versions of the exact unit page show $2,995 monthly. This establishes consistency in the supplied snapshots, not a verified lease quote or all-in price.",
+      "sourceIds": [
+        "listing",
+        "earlier"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "No-fee does not mean no additional costs",
+      "detail": "The advertiser says there is no broker fee. Deposit, application charges, utilities, insurance and any amenity fees were not established in the retrieved text. Missing amounts are not zero.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Availability needs a current confirmation",
+      "detail": "The retrieved listing advertises immediate move-in. TinyFish could not refresh the candidate pages because access was blocked; Exa did not supply its acquisition date. No manager has confirmed availability.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Pet policy is not established",
+      "detail": "The retrieved page does not establish whether pets are permitted. Silence is not a no-pets rule or permission. Ask management for the unit-specific policy.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Official building records not assessed",
+      "detail": "This report reviews marketplace text only. Complaint and violation records were not queried for this case; no safety or compliance conclusion is drawn.",
+      "sourceIds": []
+    }
+  ],
+  "questions": [
+    "Is this exact unit still available, and can you send its current written rent and lease terms?",
+    "Is the advertised price gross or net-effective, and are concessions conditional?",
+    "What are the deposit, application charge, utilities, insurance and other recurring or move-in charges?",
+    "Are pets permitted, and what restrictions apply to this exact apartment?"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "format": "renter-edge-report",
+  "version": 1,
+  "fictional": false,
+  "id": "marketplace-2",
+  "title": "330 East 46th Street #3V",
+  "scenario": "Price needs confirmation",
+  "prepared": "November 2, 2026",
+  "verdict": "Resolve the price before budgeting",
+  "summary": "An active-looking RentHop posting advertises $3,100, but earlier snapshots and a separate expired posting show different prices for unit 3V. The payable rent stays unknown until management confirms the current offer.",
+  "property": {
+    "name": "330 East 46th Street",
+    "area": "Turtle Bay, Manhattan · RentHop snapshot",
+    "unit": "3V",
+    "layout": "Studio · 1 bathroom claimed",
+    "availability": "Advertised for immediate move-in in the Exa retrieval on Nov 2, 2026. Snapshot age was not supplied; availability is not independently confirmed."
+  },
+  "costs": {
+    "gross": null,
+    "amenity": null,
+    "deposit": null,
+    "application": null,
+    "freeMonths": null,
+    "termMonths": null,
+    "unknowns": [
+      "Utilities",
+      "Renters insurance",
+      "Other move-in charges"
+    ],
+    "sourceIds": [
+      "listing",
+      "earlier",
+      "expired"
+    ],
+    "note": "Conflicting snapshots show $3,100 and $3,495 for the same posting. Another posting shows $3,450 and is returned as expired. These may reflect changes over time; acquisition timing is incomplete. No single price is treated as confirmed, and all calculated totals remain unknown."
+  },
+  "sources": [
+    {
+      "id": "listing",
+      "title": "330 East 46th Street #3V — RentHop via Exa",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/330-east-46th-street/3v/76720441",
+      "captured": "Retrieved Nov 2, 2026 via Exa; acquisition date not supplied.",
+      "excerpt": "Factual summary, not a quotation: Exact unit 3V is advertised at $3,100 monthly, studio/one bath, no broker fee and immediate move-in. Doorman and elevator are listed. Pet permission and the full fee schedule are not established. This differs from the older Parallel snapshot of the same URL."
+    },
+    {
+      "id": "earlier",
+      "title": "330 East 46th Street #3V — earlier price snapshot",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/330-east-46th-street/3v/76720441",
+      "captured": "Retrieved Nov 2, 2026 via Parallel; acquired Oct 21, 2026.",
+      "excerpt": "Factual summary, not a quotation: The exact unit page advertises $3,495 with immediate move-in. Exa returns $3,100 for the same URL without an acquisition timestamp. Temporal price changes cannot be distinguished from stale data with certainty."
+    },
+    {
+      "id": "expired",
+      "title": "330 East 46th Street #3V — separate expired posting",
+      "type": "Rental marketplace · advertiser claim",
+      "url": "https://www.renthop.com/listings/330-e-46th-street-unit-3v/3v/74448979/show",
+      "captured": "Retrieved Nov 2, 2026 via Exa; acquisition date not supplied.",
+      "excerpt": "Factual summary, not a quotation: Separate posting shows $3,450 and leased/expired status while retaining immediate-move-in wording. It is excluded as an active offer. An Oct 28 Parallel snapshot showed it without the expired marker."
+    }
+  ],
+  "findings": [
+    {
+      "level": "conflict",
+      "title": "Same unit, different prices and dates",
+      "detail": "The same listing URL returns $3,100 through Exa and $3,495 in an Oct 21 Parallel snapshot. A separate expired posting shows $3,450. These could be price changes or stale records; the current payable amount is unresolved.",
+      "sourceIds": [
+        "listing",
+        "earlier",
+        "expired"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "No-fee does not mean no additional costs",
+      "detail": "The advertiser says there is no broker fee. Deposit, application charges, utilities, insurance and any amenity fees were not established in the retrieved text. Missing amounts are not zero.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Availability needs a current confirmation",
+      "detail": "The retrieved listing advertises immediate move-in. TinyFish could not refresh the candidate pages because access was blocked; Exa did not supply its acquisition date. No manager has confirmed availability.",
+      "sourceIds": [
+        "listing"
+      ]
+    },
+    {
+      "level": "unknown",
+      "title": "Official building records not assessed",
+      "detail": "This report reviews marketplace text only. Complaint and violation records were not queried for this case; no safety or compliance conclusion is drawn.",
+      "sourceIds": []
+    }
+  ],
+  "questions": [
+    "Is this exact unit still available, and can you send its current written rent and lease terms?",
+    "Is the advertised price gross or net-effective, and are concessions conditional?",
+    "What are the deposit, application charge, utilities, insurance and other recurring or move-in charges?",
+    "Which posting and price are current for 3V, and why do the retrieved versions differ?"
+  ]
+}
