@@ -17,5 +17,5 @@ test('conflicting marketplace price is not silently chosen for the calculator',(
   assert.equal(r.costs.gross,null);assert.equal(calculateCosts(r.costs).monthly,null);
   assert.equal(calculateCosts(r.costs).upfront,null);
   assert.ok(r.findings.some(f=>f.level==='conflict'));
-  assert.equal(examples[0].costs.gross,3430);assert.equal(examples[2].costs.gross,2995);
+  for(const report of examples){ assert.equal(report.costs.gross,null); assert.equal(calculateCosts(report.costs).monthly,null); assert.equal(calculateCosts(report.costs).upfront,null); }
 });

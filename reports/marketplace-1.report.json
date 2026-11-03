@@ -10,13 +10,13 @@
   "summary": "Real RentHop listing, captured through research connectors. The retrieved page advertises immediate move-in, but current availability has not been confirmed with management. Missing fees remain unknown.",
   "property": {
     "name": "150 East 39th Street",
-    "area": "Murray Hill, Manhattan · RentHop snapshot",
+    "area": "Murray Hill, Manhattan \u00b7 RentHop snapshot",
     "unit": "901",
-    "layout": "Studio · 1 bathroom claimed",
+    "layout": "Studio \u00b7 1 bathroom claimed",
     "availability": "Advertised for immediate move-in in the Exa retrieval on Nov 2, 2026. Snapshot age was not supplied; availability is not independently confirmed."
   },
   "costs": {
-    "gross": 3430,
+    "gross": null,
     "amenity": null,
     "deposit": null,
     "application": null,
@@ -30,21 +30,21 @@
     "sourceIds": [
       "listing"
     ],
-    "note": "The displayed monthly price is an advertised rent, not a verified lease quote. Gross/net basis, concessions and lease term are not established. No-fee marketing does not establish that deposits or other charges are zero. Upfront subtotal includes only known inputs; confirm the first payment and complete move-in bill."
+    "note": "Advertised price is preserved in the source evidence, but gross versus net basis is unconfirmed. Gross rent and rent-based totals remain unknown. Confirm written lease terms and all fees before comparing the full cost."
   },
   "sources": [
     {
       "id": "listing",
-      "title": "150 East 39th Street #901 — RentHop via Exa",
-      "type": "Rental marketplace · advertiser claim",
+      "title": "150 East 39th Street #901 \u2014 RentHop via Exa",
+      "type": "Rental marketplace \u00b7 advertiser claim",
       "url": "https://www.renthop.com/listings/150-e-39th-st/901/77243945/show",
       "captured": "Retrieved Nov 2, 2026 via Exa; acquisition date not supplied.",
       "excerpt": "Factual summary, not a quotation: Exact unit 901 is advertised at $3,430 monthly, studio/one bath, no broker fee, immediate move-in. Claims include doorman, elevator, fitness center, building laundry, roof deck and pets allowed. Lease length, concessions, deposit and amenity charges were not established."
     },
     {
       "id": "earlier",
-      "title": "150 East 39th Street #901 — earlier Parallel snapshot",
-      "type": "Rental marketplace · advertiser claim",
+      "title": "150 East 39th Street #901 \u2014 earlier Parallel snapshot",
+      "type": "Rental marketplace \u00b7 advertiser claim",
       "url": "https://www.renthop.com/listings/150-e-39th-st/901/77243945/show",
       "captured": "Retrieved Nov 2, 2026 via Parallel; acquired Oct 28, 2026.",
       "excerpt": "Factual summary, not a quotation: Advertises the same exact unit at $3,430 per month with no broker fee. Move-in shown as November 1. Same webpage and publisher as the Exa retrieval; not independent corroboration."

@@ -16,10 +16,10 @@ test('pasted text produces a validated report with server-owned provenance',asyn
  const result=await analyze({url,text:'Untrusted apartment description'},{OPENAI_API_KEY:'test',OPENAI_MODEL:'test'},async(endpoint,options)=>{
  calls++;assert.equal(endpoint,'https://api.openai.com/v1/responses');
  const body=JSON.parse(options.body);assert.match(body.input,/json/i);assert.equal(body.store,false);assert.equal(body.tools,undefined);
- const r=structuredClone(examples[2]);r.sources[0].url='https://invented.test';
+ const r=structuredClone(examples[2]);r.sources[0].url='https://invented.test';r.property.layout=null;
  return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify(r)}]}]})};
  });
- assert.equal(calls,1);assert.equal(result.sources[0].url,url);assert.equal(result.fictional,false);assert.match(result.sources[0].type,/pasted/);
+ assert.equal(result.property.layout,'Unknown');assert.equal(calls,1);assert.equal(result.sources[0].url,url);assert.equal(result.fictional,false);assert.match(result.sources[0].type,/pasted/);
 });
 test('failed extraction offers text fallback without calling model',async()=>{
  let calls=0;await assert.rejects(analyze({url},{OPENAI_API_KEY:'test',OPENAI_MODEL:'test',PARALLEL_API_KEY:'test'},async()=>{calls++;return {ok:true,json:async()=>({results:[]})};}),/Paste the listing/);assert.equal(calls,1);

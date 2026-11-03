@@ -2,7 +2,21 @@
 
 I built Renter Edge out of curiosity: could AI help me look past rental marketing and understand what I would actually need to confirm before renting? It turns listing text into a report of advertised costs, supporting evidence, missing information, and questions for the broker. Built by Cody Nguyen with Codex.
 
-![Renter Edge marketplace report](docs/marketplace-preview.png)
+
+
+![Current public demo](docs/current-demo.png)
+
+## Why a dedicated tool?
+
+A general chat can summarize a listing. Renter Edge adds a consistent report format, source-linked findings, explicit unknowns, deterministic arithmetic, and an exportable broker checklist. For example, a $3,430 advertised price with an unknown gross/net basis stays in the evidence but does not become a verified gross-rent input.
+
+## My decisions
+
+I chose the renter problem and constrained the prototype to one marketplace. I used Codex to implement and debug it, separated private paid analysis from public saved reports, and chose to show missing information rather than manufacture complete answers. During live testing, I resolved a JSON-mode request error and surfaced provider billing failures. These demonstrate implementation decisions; usefulness to other renters has not yet been validated.
+
+## Architecture
+
+The static viewer validates and renders JSON reports. The optional local Node server retrieves listing text through Parallel, asks OpenAI for a report, validates the structure, and assigns source provenance. Cost calculations run in ordinary JavaScript. Source content and model text are untrusted. The public static deployment has no analysis backend or provider secrets.
 
 ## Try the demo
 
@@ -67,3 +81,11 @@ Default mode is the public saved-report viewer. Even with provider keys configur
 For your local demonstration only: generate a random token (for example, `openssl rand -hex 32`), store it as RENTER_EDGE_DEMO_TOKEN in the ignored .env file, and set RENTER_EDGE_LIVE=true. Start with `node --env-file=.env server.mjs`, then enter that token in the private demo form. It is sent in an authorization header and is not saved by app code or returned by the server. Never commit/share the token. Turn the flag off and restart afterward. Keep public hosting in default mode with no provider secrets.
 
 This adds server-side access control, not just a hidden form. Your private analyses use your provider credits. Public saved-report exploration makes no paid API calls. Keep live mode local for now; public live hosting still requires durable quotas, spending controls and HTTPS deployment configuration.
+
+## Public deployment
+
+Import this GitHub repository into Vercel using the Other framework preset. The committed vercel.json serves only dist/ with no build or install step. Do not add provider keys or enable live analysis in public hosting. The private Node server is not part of this static deployment. A deployment URL will be added only after public access has been verified.
+
+## Demo and evaluation
+
+See [the interview walkthrough](docs/DEMO.md), [AI evaluation](docs/EVALUATION.md), and [renter feedback protocol](docs/USER_FEEDBACK.md). Automated tests establish software behavior, not broad AI accuracy or customer demand.
