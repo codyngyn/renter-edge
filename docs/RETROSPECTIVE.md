@@ -10,7 +10,7 @@ The prototype is now a [public saved-report viewer](https://renter-edge.vercel.a
 
 ## Decisions I owned—and how I used Codex
 
-I chose the renter problem, prioritized a short build, requested real marketplace examples, and chose to keep public exploration separate from paid live analysis. I tested the live flow, surfaced failures, and pushed for a more credible interview artifact. Codex implemented the application, investigated errors, proposed technical fixes, and ran the software and model checks with my direction.
+I chose the renter problem, prioritized a short build, requested real marketplace examples, and chose to keep public exploration separate from paid live analysis. I tested the live flow, surfaced failures, and prioritized clearer evidence and more reliable behavior. Codex implemented the application, investigated errors, proposed technical fixes, and ran the software and model checks with my direction.
 
 The scope stayed deliberately narrow: RentHop URLs or pasted listing text, a consistent report format, source-linked findings, deterministic cost calculations, and questions for a broker. The runtime uses Parallel for retrieval and OpenAI for analysis. TinyFish and Exa supported preparation of saved research examples; they are not automatic fallback adapters in the app.
 
@@ -18,7 +18,7 @@ The scope stayed deliberately narrow: RentHop URLs or pasted listing text, a con
 
 A saved-report mode made the product immediately explorable without a visitor account or API key. Keeping paid analysis local let me demonstrate the live workflow without exposing an unrestricted public endpoint funded by my credits.
 
-Separating calculations from generated prose made the arithmetic testable. Evidence labels, source notes, and explicit unknowns gave the report a useful structure beyond a free-form summary. Exportable reports also provided a fallback for an interview when a listing or provider might be unavailable.
+Separating calculations from generated prose made the arithmetic testable. Evidence labels, source notes, and explicit unknowns gave the report a useful structure beyond a free-form summary. Exportable reports also made it possible to revisit findings when a listing or provider was unavailable.
 
 ## What failed and what changed
 
@@ -38,7 +38,7 @@ A successful model response is only one part of a working product. Retrieval, mo
 
 Validation can reject malformed reports, but it cannot establish that every claim is true. Even correct numbers can accompany a misleading explanation. The strongest improvement came from reviewing failures and preserving uncertainty, rather than making every field appear complete.
 
-The initial goal was a quick prototype that left time for interview preparation. Hardening live analysis, evaluating outputs, and publishing added follow-up work. I would budget a distinct verification and deployment phase next time rather than treat those as finishing touches.
+The initial goal was a quick prototype to test the core workflow. Hardening live analysis, evaluating outputs, and publishing added follow-up work. I would budget a distinct verification and deployment phase next time rather than treat those as finishing touches.
 
 ## What remains unproven
 
@@ -46,10 +46,10 @@ The 22 automated software tests and four synthetic AI cases do not establish bro
 
 ## What I would do next
 
-First, observe a few renters using the report and check whether they make fewer unsupported cost assumptions and understand the evidence labels. The [feedback protocol](USER_FEEDBACK.md) describes that next step. Then add unseen evaluation cases and independently review outputs, including retrieval failures and stale listings.
+1. **Test whether the report changes renter behavior.** Observe 3–5 renters using a listing with and without the report. Track unsupported cost assumptions, useful questions identified, and understanding of the evidence labels. The [feedback protocol](USER_FEEDBACK.md) describes the method; no results are claimed yet.
+2. **Evaluate unseen listings.** Build a separate set of cases that did not inform the prompt, covering concessions, conflicting prices, missing fees, stale pages, and nearby-listing contamination. Have a human compare each report against its source, including explanations rather than just numeric fields.
+3. **Make freshness easier to judge.** Distinguish retrieval time from source age, flag unavailable pages, and help renters identify which details need a fresh written confirmation. A recently retrieved page is not necessarily a current listing.
+4. **Improve the comparison workflow.** Test whether comparing two reports and carrying unresolved questions between them is more useful than adding more report detail. Build it only if observed renter tasks support that priority.
+5. **Expand access after validating value.** Add marketplace coverage based on actual renter needs. Before offering public live analysis, implement durable usage limits, spending controls, and production access management.
 
-I would expand marketplace coverage or offer public live analysis only after that evidence justifies the work. Public live analysis would also need durable usage limits, spending controls, and production access management.
-
-## Interview takeaway
-
-“I built Renter Edge to explore whether AI could make rental listings easier to question. Codex helped me turn the idea into a deployed prototype, but testing exposed a more important lesson: a polished report can still make unsupported assumptions. I corrected the cost handling, preserved failed evaluations, and kept the product's limits visible. The next test is whether it actually helps renters.”
+The next milestone is evidence that the tool helps someone ask better questions—not a larger feature list.

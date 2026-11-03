@@ -89,7 +89,7 @@ These are scope-control targets, not guarantees. Preserve the working local demo
 
 Accounts, payments, databases, autonomous citywide search, recurring monitoring, multi-agent orchestration, comprehensive public-record coverage, fair-market-rent estimation, legal conclusions, guarantees of safety, and additional provider integrations.
 
-## Coursework references and publication edits
+## Product assumptions and publication edits
 
 - Data PRD v2: https://docs.google.com/document/d/1wnMjVLJXVwS5Wbl8vmsjjdlekqznDTayeCkm1Ra-a6M/edit
 - Master prompt: https://docs.google.com/document/d/1IeHdFTHrNMLF-umtiT6XrTJx_jZO0q16yGW5jMKGbUQ/edit

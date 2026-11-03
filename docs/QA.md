@@ -59,6 +59,6 @@ The preview server stopped during handoff and was restarted successfully. The fi
 
 The exported marketplace-1 report was inspected and saved as reports/150-east-39th-901-snapshot-2026-11-02.report.json. It is the built-in researched snapshot, not a live-generated report. The private .env remains excluded from version control. Earlier entries above describe historical stages, not current test counts.
 
-## Portfolio corrections — November 3, 2026
+## Product corrections — November 3, 2026
 
-Corrected ambiguous gross rent in marketplace cases 1 and 3 and the saved interview backup. Original exports remain in Git history; current report files include the correction. All 22 tests pass. Public-mode browser inspection verified unknown rent-based totals and hidden live-analysis controls. Added current-demo.png, CI, and static-only Vercel configuration. Deployment and renter studies remain unverified.
+Corrected ambiguous gross rent in marketplace cases 1 and 3 and the saved saved example. Original exports remain in Git history; current report files include the correction. All 22 tests pass. Public-mode browser inspection verified unknown rent-based totals and hidden live-analysis controls. Added current-demo.png, CI, and static-only Vercel configuration. Deployment and renter studies remain unverified.

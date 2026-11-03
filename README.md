@@ -24,7 +24,7 @@ The static viewer validates and renders JSON reports. The optional local Node se
 
 Run the app locally using the steps below. No API keys are needed to explore the three saved reports. Choose a listing, enter a monthly budget, inspect the evidence and unknowns, and review questions to ask the broker. Use **Import report** to open any JSON report in `reports/`.
 
-The interview backup is [150 East 39th Street #901](reports/150-east-39th-901-snapshot-2026-11-02.report.json), a dated research snapshot exported November 2, 2026. It is the built-in researched example, not the subsequent live AI output. [Original RentHop listing](https://www.renthop.com/listings/150-e-39th-st/901/77243945/show). Availability and prices may change.
+The saved example is [150 East 39th Street #901](reports/150-east-39th-901-snapshot-2026-11-02.report.json), a dated research snapshot exported November 2, 2026. It is the built-in researched example, not the subsequent live AI output. [Original RentHop listing](https://www.renthop.com/listings/150-e-39th-st/901/77243945/show). Availability and prices may change.
 
 ## Run locally
 
@@ -60,7 +60,7 @@ Imported report files are processed in browser memory. They are not uploaded or 
 
 Supported evidence is not independent verification. Unknown costs remain visible and are excluded from **known subtotals**, not asserted to be zero. The upfront subtotal counts a deposit as cash needed, not rent expense. The calculator assumes one applicant per leaseholder and keeps the unit deposit fixed. Its net-effective figure applies only to the supplied original lease term; takeover eligibility and payment timing must be confirmed separately.
 
-No legal conclusions, safety guarantees, or automated housing decisions are made. A missing public record does not establish a clean history. This is a portfolio prototype, not a production apartment-search service.
+No legal conclusions, safety guarantees, or automated housing decisions are made. A missing public record does not establish a clean history. This is a rental-research prototype, not a production apartment-search service.
 
 ## Validation
 
@@ -90,7 +90,7 @@ Import this GitHub repository into Vercel using the Other framework preset. The 
 
 ## Demo and evaluation
 
-See [the interview walkthrough](docs/DEMO.md), [AI evaluation](docs/EVALUATION.md), and [renter feedback protocol](docs/USER_FEEDBACK.md). Automated tests establish software behavior, not broad AI accuracy or customer demand.
+See [the product walkthrough](docs/DEMO.md), [AI evaluation](docs/EVALUATION.md), and [renter feedback protocol](docs/USER_FEEDBACK.md). Automated tests establish software behavior, not broad AI accuracy or customer demand.
 
 ## Build retrospective
 
