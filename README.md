@@ -91,3 +91,7 @@ Import this GitHub repository into Vercel using the Other framework preset. The 
 ## Demo and evaluation
 
 See [the interview walkthrough](docs/DEMO.md), [AI evaluation](docs/EVALUATION.md), and [renter feedback protocol](docs/USER_FEEDBACK.md). Automated tests establish software behavior, not broad AI accuracy or customer demand.
+
+## Build retrospective
+
+Read [what worked, what failed, and what I would do next](docs/RETROSPECTIVE.md), including my decisions, Codex’s role, and the limits of the current evidence.
