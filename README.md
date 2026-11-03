@@ -20,6 +20,8 @@ The static viewer validates and renders JSON reports. The optional local Node se
 
 ## Try the demo
 
+**[Open the public demo](https://renter-edge.vercel.app)** — no installation, sign-in, or API keys required.
+
 Run the app locally using the steps below. No API keys are needed to explore the three saved reports. Choose a listing, enter a monthly budget, inspect the evidence and unknowns, and review questions to ask the broker. Use **Import report** to open any JSON report in `reports/`.
 
 The interview backup is [150 East 39th Street #901](reports/150-east-39th-901-snapshot-2026-11-02.report.json), a dated research snapshot exported November 2, 2026. It is the built-in researched example, not the subsequent live AI output. [Original RentHop listing](https://www.renthop.com/listings/150-e-39th-st/901/77243945/show). Availability and prices may change.
@@ -84,7 +86,7 @@ This adds server-side access control, not just a hidden form. Your private analy
 
 ## Public deployment
 
-Import this GitHub repository into Vercel using the Other framework preset. The committed vercel.json serves only dist/ with no build or install step. Do not add provider keys or enable live analysis in public hosting. The private Node server is not part of this static deployment. A deployment URL will be added only after public access has been verified.
+Import this GitHub repository into Vercel using the Other framework preset. The committed vercel.json serves only dist/ with no build or install step. Do not add provider keys or enable live analysis in public hosting. The private Node server is not part of this static deployment. Production: https://renter-edge.vercel.app. Public access and static assets verified; private configuration and backend endpoints return 404.
 
 ## Demo and evaluation
 
